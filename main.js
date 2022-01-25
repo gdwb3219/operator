@@ -154,29 +154,66 @@
 // heropy.arrow()
 
 
-const timer = {
-  name: 'Heropy!',
-  timeout: function () {
-    // setTimeout(함수, 시간)
-    setTimeout(() => {
-      console.log(this.name)
-    }, 2000)
-  }
-}
-timer.timeout()
+// const timer = {
+//   name: 'Heropy!',
+//   timeout: function () {
+//     // setTimeout(함수, 시간)
+//     setTimeout(() => {
+//       console.log(this.name)
+//     }, 2000)
+//   }
+// }
+// timer.timeout()
 
 
 // ES6 Classes
 
-const heropy = {
-  name: 'Heropy',
-  normal: function () {
-    console.log(this.name)
-  },
-  arrow: () => {
-    console.log(this.name)
+// const heropy = {
+//   name: 'Heropy',
+//   normal: function () {
+//     console.log(this.name)
+//   },
+//   arrow: () => {
+//     console.log(this.name)
+//   }
+// }
+
+// heropy.normal()
+// heropy.arrow()
+
+
+// function User(first, last) {
+//   this.firstName = first
+//   this.lastName = last
+// }
+// User.prototype.getFullName = function () {
+//   return `${this.firstName} ${this.lastName}`
+// }
+
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`
   }
 }
 
-heropy.normal()
-heropy.arrow()
+
+const heropy = new User('Heropy', 'Park')
+const amy = new User('Amy', 'Clarke')
+const neo = new User('Neo', 'Smith')
+
+console.log(heropy)
+console.log(amy.getFullName())
+console.log(neo.getFullName())
+
+
+
+// class User {
+//   constructor(first, last) {
+//     this.firstName = first
+//     this.lastName = last
+//   }
+// }
