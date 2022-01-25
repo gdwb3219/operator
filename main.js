@@ -212,36 +212,54 @@
 
 // 상속(확장)
 
-class Vehicle {
-  constructor(name, wheel) {
-    this.name = name
-    this.wheel = wheel
-  }
-}
-const myVehicle = new Vehicle('운송수단', 2)
-console.log(myVehicle)
+// class Vehicle {
+//   constructor(name, wheel) {
+//     this.name = name
+//     this.wheel = wheel
+//   }
+// }
+// const myVehicle = new Vehicle('운송수단', 2)
+// console.log(myVehicle)
 
-class Bicycle extends Vehicle {
-  constructor(name, wheel) {
-    super(name, wheel)
-  }
-}
+// class Bicycle extends Vehicle {
+//   constructor(name, wheel) {
+//     super(name, wheel)
+//   }
+// }
 
-class Car extends Vehicle {
-  constructor(name, wheel, license) {
-    super(name, wheel)
-    this.license = license
-  }
-}
+// class Car extends Vehicle {
+//   constructor(name, wheel, license) {
+//     super(name, wheel)
+//     this.license = license
+//   }
+// }
 
-const jajungue = new Bicycle('삼천리', 2)
-const dautersBicycle = new Bicycle('세발', 3)
+// const jajungue = new Bicycle('삼천리', 2)
+// const dautersBicycle = new Bicycle('세발', 3)
 
-console.log(jajungue)
-console.log(dautersBicycle)
+// console.log(jajungue)
+// console.log(dautersBicycle)
 
-const whiteCar = new Car('흰붕이', 4, true)
-console.log(whiteCar)
+// const whiteCar = new Car('흰붕이', 4, true)
+// console.log(whiteCar)
 
-const myCar = new Car('벤틀리', 4, false)
-console.log(myCar)
+// const myCar = new Car('벤틀리', 4, false)
+// console.log(myCar)
+
+
+// JS 데이터
+// 문자
+
+// const result = 'Hello world!'.indexOf('heropy')
+// console.log(result)
+
+// const str = '0123'
+// console.log('0123'.length)  //길이 나타내기
+
+// const str = 'gdwb3219@naver.com'
+
+// console.log(str.match(/.+(?=@)/))
+// console.log(str.match(/.+(?=@)/)[0])  // 정규 표현식
+
+const str = '   Hello world   '
+console.log(str.trim()) // 공백 없애기
