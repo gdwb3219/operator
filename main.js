@@ -190,30 +190,58 @@
 //   return `${this.firstName} ${this.lastName}`
 // }
 
-class User {
-  constructor(first, last) {
-    this.firstName = first
-    this.lastName = last
-  }
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`
-  }
-}
-
-
-const heropy = new User('Heropy', 'Park')
-const amy = new User('Amy', 'Clarke')
-const neo = new User('Neo', 'Smith')
-
-console.log(heropy)
-console.log(amy.getFullName())
-console.log(neo.getFullName())
-
-
-
 // class User {
 //   constructor(first, last) {
 //     this.firstName = first
 //     this.lastName = last
 //   }
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`
+//   }
 // }
+
+
+// const heropy = new User('Heropy', 'Park')
+// const amy = new User('Amy', 'Clarke')
+// const neo = new User('Neo', 'Smith')
+
+// console.log(heropy)
+// console.log(amy.getFullName())
+// console.log(neo.getFullName())
+
+
+// 상속(확장)
+
+class Vehicle {
+  constructor(name, wheel) {
+    this.name = name
+    this.wheel = wheel
+  }
+}
+const myVehicle = new Vehicle('운송수단', 2)
+console.log(myVehicle)
+
+class Bicycle extends Vehicle {
+  constructor(name, wheel) {
+    super(name, wheel)
+  }
+}
+
+class Car extends Vehicle {
+  constructor(name, wheel, license) {
+    super(name, wheel)
+    this.license = license
+  }
+}
+
+const jajungue = new Bicycle('삼천리', 2)
+const dautersBicycle = new Bicycle('세발', 3)
+
+console.log(jajungue)
+console.log(dautersBicycle)
+
+const whiteCar = new Car('흰붕이', 4, true)
+console.log(whiteCar)
+
+const myCar = new Car('벤틀리', 4, false)
+console.log(myCar)
