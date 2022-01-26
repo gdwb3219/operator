@@ -261,5 +261,22 @@
 // console.log(str.match(/.+(?=@)/))
 // console.log(str.match(/.+(?=@)/)[0])  // 정규 표현식
 
-const str = '   Hello world   '
-console.log(str.trim()) // 공백 없애기
+// const str = '   Hello world   '
+// console.log(str.trim()) // 공백 없애기
+
+
+// Math, text
+
+const pi = 3.141592
+console.log(pi)
+console.log(typeof pi)
+
+const str = pi.toFixed(2)
+console.log(typeof str)
+
+const a = 3
+const b = parseInt(a)
+
+console.log(b)
+console.log(typeof a)
+console.log(typeof b)
