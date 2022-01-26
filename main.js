@@ -267,16 +267,65 @@
 
 // Math, text
 
-const pi = 3.141592
-console.log(pi)
-console.log(typeof pi)
+// const pi = 3.141592
+// console.log(pi)
+// console.log(typeof pi)
 
-const str = pi.toFixed(2)
-console.log(typeof str)
+// const str = pi.toFixed(2)
+// console.log(typeof str)
 
-const a = 3
-const b = parseInt(a)
+// const a = 3
+// const b = parseInt(a)
 
+// console.log(b)
+// console.log(typeof a)
+// console.log(typeof b)
+
+
+// Array
+
+// const numbers = [1, 2, 3, 4]
+// const fruits = ['Apple', 'Banana', 'Cherry']
+
+// console.log(numbers.length)
+// console.log(fruits.length)
+// console.log([1, 2].length)
+// console.log([].length)
+
+
+// concat 원본의 데이터에는 영향이 없다
+const numbers = [1, 2, 3, 4]
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+// console.log(numbers.concat(fruits))
+// console.log(numbers)
+// console.log(fruits)
+
+// // forEach method
+// // 화살표 함수도 가능하네
+
+// fruits.forEach(function(element, index, array) {
+//   console.log(element, index, array)
+// })
+
+// fruits.forEach((element, index, array) => {
+//   console.log(element, index, array)
+// })
+
+
+const a = fruits.forEach((fruit, index) => {
+  console.log(`${fruit}-${index}`)
+})
+console.log(a)
+
+
+const b = fruits.map((fruit, index) => {
+  return `${fruit}-${index}`
+})
 console.log(b)
-console.log(typeof a)
-console.log(typeof b)
+
+const c = fruits.map((fruit, index) => ({ 
+    id: index,
+    name: fruit
+}))
+console.log(c)
