@@ -313,19 +313,70 @@ const fruits = ['Apple', 'Banana', 'Cherry']
 // })
 
 
-const a = fruits.forEach((fruit, index) => {
-  console.log(`${fruit}-${index}`)
-})
+// const a = fruits.forEach((fruit, index) => {
+//   console.log(`${fruit}-${index}`)
+// })
+// console.log(a)
+
+
+// const b = fruits.map((fruit, index) => {
+//   return `${fruit}-${index}`
+// })
+// console.log(b)
+
+// const c = fruits.map((fruit, index) => ({ 
+//     id: index,
+//     name: fruit
+// }))
+// console.log(c)
+
+
+
+// .filter() 필터 함수
+
+// const a = numbers.map(number => {
+//   return number < 3
+// })
+// console.log(a)
+
+// const b = numbers.filter(number => {
+//   return number < 3
+// })
+// console.log(b)
+
+
+// const c = numbers.map(number => number < 3)
+// console.log(c)
+
+// const d = numbers.filter(number => number < 3)
+// console.log(d)
+
+
+// .find() .findIndex()
+
+const a = fruits.find(fruit => /^C/.test(fruit))
 console.log(a)
 
 
-const b = fruits.map((fruit, index) => {
-  return `${fruit}-${index}`
-})
+const b = fruits.findIndex(fruit => /^C/.test(fruit))
 console.log(b)
 
-const c = fruits.map((fruit, index) => ({ 
-    id: index,
-    name: fruit
-}))
-console.log(c)
+
+// push() unshift()
+// 원본 수정 주의!
+
+numbers.push(5)
+console.log(numbers)
+
+numbers.unshift(0)
+console.log(numbers)
+
+
+// .reverse()
+// 원본 수정됨 주의
+
+numbers.reverse()
+fruits.reverse()
+
+console.log(numbers)
+console.log(fruits)
