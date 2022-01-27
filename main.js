@@ -354,29 +354,39 @@ const fruits = ['Apple', 'Banana', 'Cherry']
 
 // .find() .findIndex()
 
-const a = fruits.find(fruit => /^C/.test(fruit))
-console.log(a)
+// const a = fruits.find(fruit => /^C/.test(fruit))
+// console.log(a)
 
 
-const b = fruits.findIndex(fruit => /^C/.test(fruit))
-console.log(b)
+// const b = fruits.findIndex(fruit => /^C/.test(fruit))
+// console.log(b)
 
 
-// push() unshift()
-// 원본 수정 주의!
+// // push() unshift()
+// // 원본 수정 주의!
 
-numbers.push(5)
-console.log(numbers)
+// numbers.push(5)
+// console.log(numbers)
 
-numbers.unshift(0)
-console.log(numbers)
+// numbers.unshift(0)
+// console.log(numbers)
 
 
 // .reverse()
-// 원본 수정됨 주의
+// 원본 수정됨 주의!
 
-numbers.reverse()
-fruits.reverse()
+// numbers.reverse()
+// fruits.reverse()
 
-console.log(numbers)
+// console.log(numbers)
+// console.log(fruits)
+
+
+// .splice()
+// 원본 수정됨 주의!
+
+// numbers.splice(2, 0, 999)
+// console.log(numbers)
+
+fruits.splice(2, 0, 'Orange')
 console.log(fruits)
