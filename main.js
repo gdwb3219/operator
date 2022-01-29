@@ -434,21 +434,69 @@
 // 구조 분해 할당 (Destructuring assignment)
 // 비구조화 할당
 
-const user = {
-  name: 'Heropy',
-  age: 85,
-  email: 'thesecon@gmail.com',
-  address: 'USA'
+// const user = {
+//   name: 'Heropy',
+//   age: 85,
+//   email: 'thesecon@gmail.com',
+//   address: 'USA'
+// }
+// const { name: heropy, age, email, address = 'Korea' } = user
+// // e.g user.address 와 같은 방식
+// // const heropy = name
+
+// console.log(`사용자의 이름은 ${heropy}입니다.`)
+// console.log(`${heropy}의 나이는 ${age}세입니다.`)
+// console.log(`${heropy}의 이메일 주소는 ${user.email}입니다.`)
+// console.log(address)
+
+// const fruits = ['Apple', 'Banana', 'Cherry']
+// const [,, b] = fruits
+// console.log(b)
+
+
+// 전개 연산자 (Spread)
+
+const fruits = ['Apple', 'Banana', 'Cherry', 'Orange']
+// console.log(fruits)
+// console.log(...fruits)
+
+// function toObject(a, b, ...c) {
+//   return {
+//     a: a,
+//     b: b,
+//     c: c
+//   }
+// }
+
+// console.log(toObject(...fruits))
+
+// 축약형으로 반환
+// 1.
+let toObject1 = function(a, b, ...c) {
+  return {
+    a: a,
+    b: b,
+    c: c
+  }
 }
-const { name: heropy, age, email, address = 'Korea' } = user
-// e.g user.address 와 같은 방식
-// const heropy = name
-
-console.log(`사용자의 이름은 ${heropy}입니다.`)
-console.log(`${heropy}의 나이는 ${age}세입니다.`)
-console.log(`${heropy}의 이메일 주소는 ${user.email}입니다.`)
-console.log(address)
-
-const fruits = ['Apple', 'Banana', 'Cherry']
-const [,, b] = fruits
-console.log(b)
+console.log(toObject1(...fruits))
+// 2.
+let toObject2 = (a, b, ...c) => {
+  return {
+    a: a,
+    b: b,
+    c: c
+  }
+}
+console.log(toObject2(...fruits))
+// 3.
+let toObject3 = (a, b, ...c) => {
+  return {a, b, c}
+}
+console.log(toObject3(...fruits))
+// 4.
+let toObject4 = (a, b, ...c) => {a, b, c}
+console.log(toObject4(...fruits))
+// 5.
+let toObject5 = (a, b, ...c) => ({a, b, c})
+console.log(toObject5(...fruits))
