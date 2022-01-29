@@ -391,3 +391,28 @@
 // fruits.splice(2, 0, 'Orange')
 // console.log(fruits)
 
+// const target = {a: 1, b: 2}
+// const source = {b: 4, c: 5}
+
+
+// Object practice
+
+const userAge = {
+  name: 'Heropy',
+  age: 85
+}
+const userEmail = {
+  name: 'Heropy',
+  email: 'thesecon@gmail.com'
+}
+
+console.log(userAge)
+console.log(userEmail)
+const target = Object.assign(userAge, userEmail)
+console.log(target)
+console.log(userAge)
+console.log(target === userAge)
+
+const a = { k: 123 }
+const b = { k: 123 }
+console.log(a === b)
