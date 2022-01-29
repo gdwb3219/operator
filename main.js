@@ -294,8 +294,8 @@
 
 
 // concat 원본의 데이터에는 영향이 없다
-const numbers = [1, 2, 3, 4]
-const fruits = ['Apple', 'Banana', 'Cherry']
+// const numbers = [1, 2, 3, 4]
+// const fruits = ['Apple', 'Banana', 'Cherry']
 
 // console.log(numbers.concat(fruits))
 // console.log(numbers)
@@ -388,5 +388,6 @@ const fruits = ['Apple', 'Banana', 'Cherry']
 // numbers.splice(2, 0, 999)
 // console.log(numbers)
 
-fruits.splice(2, 0, 'Orange')
-console.log(fruits)
+// fruits.splice(2, 0, 'Orange')
+// console.log(fruits)
+
