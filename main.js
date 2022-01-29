@@ -397,21 +397,58 @@
 
 // Object practice
 
-const userAge = {
+// const userAge = {
+//   name: 'Heropy',
+//   age: 85
+// }
+// const userEmail = {
+//   name: 'Heropy',
+//   email: 'thesecon@gmail.com'
+// }
+
+
+// const target = Object.assign({}, userAge)
+// console.log(target)
+// console.log(userAge)
+// console.log(target === userAge)
+
+// const a = { k: 123 }
+// const b = { k: 123 }
+// console.log(a === b)
+
+// const user = {
+//   name: 'Heropy',
+//   age: 85,
+//   email: 'thesecon@gmail.com'
+// }
+
+// const keys = Object.keys(user)
+// console.log(keys)
+
+// console.log(user['email'])
+
+// const values = keys.map(key => user[key])
+// console.log(values)
+
+
+// 구조 분해 할당 (Destructuring assignment)
+// 비구조화 할당
+
+const user = {
   name: 'Heropy',
-  age: 85
+  age: 85,
+  email: 'thesecon@gmail.com',
+  address: 'USA'
 }
-const userEmail = {
-  name: 'Heropy',
-  email: 'thesecon@gmail.com'
-}
+const { name: heropy, age, email, address = 'Korea' } = user
+// e.g user.address 와 같은 방식
+// const heropy = name
 
+console.log(`사용자의 이름은 ${heropy}입니다.`)
+console.log(`${heropy}의 나이는 ${age}세입니다.`)
+console.log(`${heropy}의 이메일 주소는 ${user.email}입니다.`)
+console.log(address)
 
-const target = Object.assign({}, userAge)
-console.log(target)
-console.log(userAge)
-console.log(target === userAge)
-
-const a = { k: 123 }
-const b = { k: 123 }
-console.log(a === b)
+const fruits = ['Apple', 'Banana', 'Cherry']
+const [,, b] = fruits
+console.log(b)
