@@ -406,9 +406,8 @@ const userEmail = {
   email: 'thesecon@gmail.com'
 }
 
-console.log(userAge)
-console.log(userEmail)
-const target = Object.assign(userAge, userEmail)
+
+const target = Object.assign({}, userAge)
 console.log(target)
 console.log(userAge)
 console.log(target === userAge)
