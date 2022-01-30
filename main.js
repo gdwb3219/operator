@@ -520,15 +520,37 @@
 
 // 참조형 데이터
 
-let a = {k: 1}
-let b = {k: 1}
-console.log(a, b, a === b)
-a.k = 7
-b = a
-console.log(a, b, a === b)
-a.k = 2
-console.log(a, b, a === b)
-let c = b
-console.log(a, b, c, a === c)
-a.k = 9
-console.log(a, b, c, a === c)
+// let a = {k: 1}
+// let b = {k: 1}
+// console.log(a, b, a === b)
+// a.k = 7
+// b = a
+// console.log(a, b, a === b)
+// a.k = 2
+// console.log(a, b, a === b)
+// let c = b
+// console.log(a, b, c, a === c)
+// a.k = 9
+// console.log(a, b, c, a === c)
+
+
+// 얕은 복사 (Shallow copy) , 깊은 복사 (Deep copy)
+const user = {
+  name: 'Heropy',
+  age: 85,
+  emails: ['thesecon@gmail.com']
+}
+const copyUser = {...user}
+console.log(copyUser === user)
+
+user.age = 22
+console.log('user', user)
+console.log('copyUser', copyUser)
+
+console.log('------')
+console.log('------')
+
+user.emails.push('neo@zillinks.com')
+console.log(user.emails === copyUser.emails)
+console.log('user', user)
+console.log('copyUser', copyUser)
