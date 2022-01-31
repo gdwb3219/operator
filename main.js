@@ -1,4 +1,5 @@
 // import random from './getRandom'
+import _ from 'lodash'
 
 // const a = random()
 
@@ -540,7 +541,8 @@ const user = {
   age: 85,
   emails: ['thesecon@gmail.com']
 }
-const copyUser = {...user}
+
+const copyUser = _.cloneDeep(user)
 console.log(copyUser === user)
 
 user.age = 22
