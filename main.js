@@ -1,5 +1,5 @@
 // import random from './getRandom'
-import _ from 'lodash'
+// import _ from 'lodash'
 
 // const a = random()
 
@@ -536,23 +536,31 @@ import _ from 'lodash'
 
 
 // 얕은 복사 (Shallow copy) , 깊은 복사 (Deep copy)
-const user = {
-  name: 'Heropy',
-  age: 85,
-  emails: ['thesecon@gmail.com']
-}
+// const user = {
+//   name: 'Heropy',
+//   age: 85,
+//   emails: ['thesecon@gmail.com']
+// }
 
-const copyUser = _.cloneDeep(user)
-console.log(copyUser === user)
+// const copyUser = _.cloneDeep(user)
+// console.log(copyUser === user)
 
-user.age = 22
-console.log('user', user)
-console.log('copyUser', copyUser)
+// user.age = 22
+// console.log('user', user)
+// console.log('copyUser', copyUser)
 
-console.log('------')
-console.log('------')
+// console.log('------')
+// console.log('------')
 
-user.emails.push('neo@zillinks.com')
-console.log(user.emails === copyUser.emails)
-console.log('user', user)
-console.log('copyUser', copyUser)
+// user.emails.push('neo@zillinks.com')
+// console.log(user.emails === copyUser.emails)
+// console.log('user', user)
+// console.log('copyUser', copyUser)
+
+import _ from 'lodash'
+import getType from './getType'
+import getRandom from './getRandom'
+
+console.log(_.camelCase('the hello world'))
+console.log(getType([1, 2, 3]))
+console.log(getRandom(), getRandom())
