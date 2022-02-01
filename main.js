@@ -569,7 +569,7 @@
 
 
 // Lodash 실습
-import _ from 'lodash'
+import _, { rest } from 'lodash'
 
 // const usersA = [
 //   { userID: '1', name: 'HEROPY' },
@@ -633,22 +633,42 @@ import _ from 'lodash'
 
 
 // ## Local Storage / Session Storage
-const user = {
-  name: 'HEROPY',
-  age: 85,
-  emails: [
-    'thesecon@gmail.com',
-    'neo@zillinks.com'
-  ]
-}
+// const user = {
+//   name: 'HEROPY',
+//   age: 85,
+//   emails: [
+//     'thesecon@gmail.com',
+//     'neo@zillinks.com'
+//   ]
+// }
 
 // localStorage.setItem('user',JSON.stringify(user))
 // console.log(JSON.parse(localStorage.getItem('user')))
 
 // local Storage 데이터 변경하기
-const str = localStorage.getItem('user')
-const obj = JSON.parse(str)
-obj.age = 22
+// const str = localStorage.getItem('user')
+// const obj = JSON.parse(str)
+// obj.age = 22
 
-console.log(obj)
-localStorage.setItem('user', JSON.stringify(obj))
+// console.log(obj)
+// localStorage.setItem('user', JSON.stringify(obj))
+
+
+
+// ## axios 설치 , 영화 가져오기
+
+import axios from 'axios'
+
+function fetchMovies() {
+  axios
+  .get('https://www.omdbapi.com/?apikey=7035c60c&s=jurassic')
+  .then(res => {
+    console.log(res)
+    const h1El = document.querySelector('h1')
+    const imgEl = document.querySelector('img')
+    h1El.textContent = res.data.Search[5].Title
+    imgEl.src = res.data.Search[5].Poster
+  })
+}
+
+fetchMovies()
