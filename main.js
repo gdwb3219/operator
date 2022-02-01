@@ -557,12 +557,48 @@
 // console.log('user', user)
 // console.log('copyUser', copyUser)
 
-import _ from 'lodash'
-import checkType from './getType'
-// import { random, user } from './getRandom'/
-import * as R from './getRandom'
+// import _ from 'lodash'
+// import checkType from './getType'
+// // import { random, user } from './getRandom'/
+// import * as R from './getRandom'
 
-console.log(_.camelCase('the hello world'))
-console.log(checkType([1, 2, 3]))
-// console.log(random(), random())
-console.log(R)
+// console.log(_.camelCase('the hello world'))
+// console.log(checkType([1, 2, 3]))
+// // console.log(random(), random())
+// console.log(R)
+
+
+// Lodash 실습
+import _ from 'lodash'
+
+// const usersA = [
+//   { userID: '1', name: 'HEROPY' },
+//   { userID: '2', name: 'Neo'}
+// ]
+// const usersB = [
+//   { userID: '1', name: 'HEROPY' },
+//   { userID: '3', name: 'Amy' }
+// ]
+// const usersC = usersA.concat(usersB)
+// console.log('concat', usersC)
+// console.log('uniqBy', _.uniqBy(usersC, 'userID'))
+
+// const usersD = _.unionBy(usersA, usersB, 'userID')
+// console.log('unionBy', usersD)
+
+
+const users = [
+  { userID: '1', name: 'HEROPY'},
+  { userID: '2', name: 'Neo'},
+  { userID: '3', name: 'Amy'},
+  { userID: '4', name: 'Evan'},
+  { userID: '5', name: 'Lewis'}
+]
+
+const foundUser = _.find(users, {name: 'Amy'})
+const foundUserIndex = _.findIndex(users, {name: 'Amy'})
+console.log(foundUser)
+console.log(foundUserIndex)
+
+_.remove(users, {name: 'HEROPY'})
+console.log(users)
