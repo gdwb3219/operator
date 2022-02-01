@@ -587,18 +587,45 @@ import _ from 'lodash'
 // console.log('unionBy', usersD)
 
 
-const users = [
-  { userID: '1', name: 'HEROPY'},
-  { userID: '2', name: 'Neo'},
-  { userID: '3', name: 'Amy'},
-  { userID: '4', name: 'Evan'},
-  { userID: '5', name: 'Lewis'}
-]
+// find, findIndex, remove
+// const users = [
+//   { userID: '1', name: 'HEROPY'},
+//   { userID: '2', name: 'Neo'},
+//   { userID: '3', name: 'Amy'},
+//   { userID: '4', name: 'Evan'},
+//   { userID: '5', name: 'Lewis'}
+// ]
 
-const foundUser = _.find(users, {name: 'Amy'})
-const foundUserIndex = _.findIndex(users, {name: 'Amy'})
-console.log(foundUser)
-console.log(foundUserIndex)
+// const foundUser = _.find(users, {name: 'Amy'})
+// const foundUserIndex = _.findIndex(users, {name: 'Amy'})
+// console.log(foundUser)
+// console.log(foundUserIndex)
 
-_.remove(users, {name: 'HEROPY'})
-console.log(users)
+// _.remove(users, {name: 'HEROPY'})
+// console.log(users)
+
+
+
+// ## JSON (JavaScript Object Notation)
+// 자바스크립트의 객체 표기법
+
+import myData from './myData.json'
+
+console.log(myData)
+
+const user = {
+  name: 'HEROPY',
+  age: 85,
+  emails: [
+    'thesecon@gmail.com',
+    'neo@zillinks.com'
+  ]
+}
+console.log('user', user)
+
+const str = JSON.stringify(user)
+console.log('str', str)
+console.log(typeof str)
+
+const obj = JSON.parse(str)
+console.log('obj', obj)
